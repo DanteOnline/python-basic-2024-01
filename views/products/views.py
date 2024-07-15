@@ -12,11 +12,7 @@ from werkzeug.exceptions import (
 
 from .crud import products_storage as storage
 
-products_app = Blueprint(
-    "products_app",
-    __name__,
-    url_prefix="/products"
-)
+products_app = Blueprint("products_app", __name__, url_prefix="/products")
 
 
 @products_app.get("/", endpoint="list")
